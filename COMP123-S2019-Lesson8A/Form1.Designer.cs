@@ -1,6 +1,6 @@
 ﻿namespace COMP123_S2019_Lesson8A
 {
-    partial class Form1
+    partial class Lab08Form
     {
         /// <summary>
         /// Required designer variable.
@@ -35,6 +35,7 @@
             this.AgeTextBox = new System.Windows.Forms.TextBox();
             this.AgeLabel = new System.Windows.Forms.Label();
             this.SubmitButton = new System.Windows.Forms.Button();
+            this.OutputLabel = new System.Windows.Forms.Label();
             this.InfoGroupbox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,6 +82,7 @@
             this.NameTexBox.Name = "NameTexBox";
             this.NameTexBox.Size = new System.Drawing.Size(403, 38);
             this.NameTexBox.TabIndex = 1;
+            this.NameTexBox.TextChanged += new System.EventHandler(this.NameTexBox_TextChanged);
             // 
             // AgeTextBox
             // 
@@ -89,6 +91,7 @@
             this.AgeTextBox.Name = "AgeTextBox";
             this.AgeTextBox.Size = new System.Drawing.Size(403, 38);
             this.AgeTextBox.TabIndex = 3;
+            this.AgeTextBox.TextChanged += new System.EventHandler(this.AgeTextBox_TextChanged);
             // 
             // AgeLabel
             // 
@@ -110,17 +113,27 @@
             this.SubmitButton.TabIndex = 2;
             this.SubmitButton.Text = "Submit";
             this.SubmitButton.UseVisualStyleBackColor = false;
+            this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
-            // Form1
+            // OutputLabel
+            // 
+            this.OutputLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OutputLabel.Location = new System.Drawing.Point(20, 387);
+            this.OutputLabel.Name = "OutputLabel";
+            this.OutputLabel.Size = new System.Drawing.Size(152, 31);
+            this.OutputLabel.TabIndex = 4;
+            // 
+            // Lab08Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(624, 441);
+            this.Controls.Add(this.OutputLabel);
             this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.InfoGroupbox);
             this.Controls.Add(this.TitleLabel);
-            this.Name = "Form1";
+            this.Name = "Lab08Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lab08";
             this.InfoGroupbox.ResumeLayout(false);
@@ -139,6 +152,7 @@
         private System.Windows.Forms.TextBox AgeTextBox;
         private System.Windows.Forms.Label AgeLabel;
         private System.Windows.Forms.Button SubmitButton;
+        private System.Windows.Forms.Label OutputLabel;
     }
 }
 
