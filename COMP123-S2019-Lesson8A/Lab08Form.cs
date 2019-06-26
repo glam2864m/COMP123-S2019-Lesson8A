@@ -16,5 +16,10 @@ namespace COMP123_S2019_Lesson8A
         {
             InitializeComponent();
         }
+
+        private void InfoGroupbox_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
